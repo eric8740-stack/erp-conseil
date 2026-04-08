@@ -1,0 +1,211 @@
+// ============================================
+// NAVBAR SCROLL EFFECT
+// ============================================
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ============================================
+// MOBILE MENU TOGGLE
+// ============================================
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
+});
+
+// Close menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    });
+});
+
+// ============================================
+// PROJECT FILTERS
+// ============================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.classList.remove('hidden');
+                card.style.animation = 'fadeInUp 0.4s ease forwards';
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+});
+
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Add fade-in class to elements
+document.querySelectorAll('.skill-card, .project-card, .about-content, .about-visual, .contact-form, .contact-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+});
+
+// ============================================
+// COUNTER ANIMATION
+// ============================================
+const statNumbers = document.querySelectorAll('.stat-number');
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const target = entry.target;
+            const count = parseInt(target.dataset.count);
+            animateCounter(target, count);
+            counterObserver.unobserve(target);
+        }
+    });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(num => counterObserver.observe(num));
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 40;
+    const duration = 1500;
+    const stepTime = duration / 40;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, stepTime);
+}
+
+// ============================================
+// PROJECT MODAL
+// ============================================
+const modal = document.getElementById('projectModal');
+const modalImg = document.getElementById('modalImg');
+const modalTag = document.getElementById('modalTag');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalTags = document.getElementById('modalTags');
+const modalClose = document.getElementById('modalClose');
+
+projectCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const info = card.querySelector('.project-info');
+        const img = card.querySelector('.project-image img');
+        const tag = info.querySelector('.project-tag');
+        const title = info.querySelector('h3').textContent;
+        const desc = info.querySelector('p').textContent;
+        const tags = info.querySelectorAll('.skill-tags li');
+
+        // Set modal image
+        if (img && img.style.display !== 'none') {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalImg.style.display = 'block';
+        } else {
+            modalImg.style.display = 'none';
+        }
+
+        // Set tag with correct class
+        modalTag.textContent = tag.textContent;
+        modalTag.className = 'modal-tag';
+        if (tag.classList.contains('tag-vba')) modalTag.classList.add('tag-vba');
+        if (tag.classList.contains('tag-ice')) modalTag.classList.add('tag-ice');
+
+        // Set content
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+
+        // Set tags
+        modalTags.innerHTML = '';
+        tags.forEach(t => {
+            const span = document.createElement('span');
+            span.textContent = t.textContent;
+            modalTags.appendChild(span);
+        });
+
+        // Open modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close modal
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
+// ============================================
+// CONTACT FORM
+// ============================================
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+
+    // Show success message
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Message envoyé !';
+    btn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+
+    setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        contactForm.reset();
+    }, 3000);
+});
+
+// ============================================
+// SMOOTH REVEAL ON LOAD
+// ============================================
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    requestAnimationFrame(() => {
+        document.body.style.opacity = '1';
+    });
+});

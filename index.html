@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Paysant | ERP Conseil — Data Analyst Power BI & Excel VBA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">ERP <span class="dot">Conseil</span></a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <p class="hero-tag">ERP Conseil — 28 ans d'expérience industrielle</p>
+            <h1 class="hero-title">
+                Je transforme vos <span class="gradient-text">données</span><br>
+                en <span class="gradient-text">décisions</span>.
+            </h1>
+            <p class="hero-subtitle">
+                Data Analyst spécialisé en performance industrielle. Systèmes décisionnels complets
+                Power BI, DAX, VBA, SQL & Python — de la donnée terrain au tableau de bord.
+            </p>
+            <div class="hero-actions">
+                <a href="#realisations" class="btn btn-primary">Voir mes réalisations</a>
+                <a href="#contact" class="btn btn-outline">Me contacter</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="28">0</span>
+                    <span class="stat-label">Ans d'expérience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Dashboards Power BI</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="66">0</span>
+                    <span class="stat-label">Pages Power BI</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="400">0</span>
+                    <span class="stat-label">Mesures DAX</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="119">0</span>
+                    <span class="stat-label">Onglets Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="section" id="competences">
+        <div class="container">
+            <h2 class="section-title">Ce que je sais faire</h2>
+            <p class="section-subtitle">Des compétences au service de vos données</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Tableaux de bord Power BI</h3>
+                    <p>Conception de dashboards interactifs pour la production, la trésorerie, la maintenance et les revues de direction.</p>
+                    <ul class="skill-tags">
+                        <li>DAX</li>
+                        <li>Power Query</li>
+                        <li>Modélisation</li>
+                        <li>KPIs</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 6h16M4 12h16M4 18h10"/>
+                            <rect x="2" y="3" width="20" height="18" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>Excel VBA avancé</h3>
+                    <p>Développement d'applications complexes : analyse de rentabilité, calculs de coûts multi-niveaux, export automatisé vers Power BI.</p>
+                    <ul class="skill-tags">
+                        <li>Macros VBA</li>
+                        <li>Architecture modulaire</li>
+                        <li>Export CSV</li>
+                        <li>Automatisation</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Analyse de rentabilité</h3>
+                    <p>Comparaison théorique vs réel, coûts MO, sous-traitance, composants et analyse par déviseur pour piloter la marge.</p>
+                    <ul class="skill-tags">
+                        <li>Coûts de production</li>
+                        <li>Marges</li>
+                        <li>Écarts</li>
+                        <li>Sous-traitance</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Pilotage & aide à la décision</h3>
+                    <p>Charge de travail vs capacité RH, suivi de trésorerie et tableaux de synthèse pour la direction générale.</p>
+                    <ul class="skill-tags">
+                        <li>Charge de travail</li>
+                        <li>Trésorerie</li>
+                        <li>Direction</li>
+                        <li>Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section class="section section-dark" id="realisations">
+        <div class="container">
+            <h2 class="section-title">Mes réalisations</h2>
+            <p class="section-subtitle">Projets concrets réalisés chez A3D et Ice Etiquettes</p>
+
+            <!-- Filtres -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="vba">Excel VBA — A3D</button>
+                <button class="filter-btn" data-filter="ice">Excel VBA — Ice Etiquettes</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Projet 1 - Power BI : Analyse Coûts Production -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="images/analyse-couts-production.png" alt="Dashboard Analyse des Coûts de Production" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Power BI</span>
+                        <h3>Analyse des Coûts de Production</h3>
+                        <p>Dashboard de 6 pages connecté à l'outil VBA. Vue d'ensemble déviseurs, rentabilité, synthèse et analyse des écarts, charge de travail et analyse par groupe.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Power BI : Trésorerie -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="images/tresorerie.png" alt="Dashboard Trésorerie" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Power BI</span>
+                        <h3>Trésorerie</h3>
+                        <p>Tableau de bord trésorerie Power BI : 5 comptes bancaires, 24 périodes bi-mensuelles, flux financiers, prévisions et indicateurs de santé financière.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Power BI : Maintenance -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="images/maintenance.png" alt="Dashboard Maintenance" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Power BI</span>
+                        <h3>Maintenance</h3>
+                        <p>Tableau de bord de suivi de la maintenance des équipements de production : interventions, planification préventive et indicateurs de performance.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Power BI : Revue De Direction -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="images/trame-rdd.png" alt="Dashboard Revue De Direction" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Power BI</span>
+                        <h3>ISO 9001 — Revue De Direction</h3>
+                        <p>Dashboard Power BI de 56 pages, ~400 mesures DAX, modèle sémantique de 40 tables. 2 ERP connectés via ODBC (Solune + Qualishare), couvrant CA, Clients, NC, RH, Formations, Actions correctives et SMQ. Résultat : point critique → point fort lors de l'audit ISO 9001.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Power BI : Retards de Livraison -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="images/retards-livraison.png" alt="Dashboard Retards de Livraison" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Power BI</span>
+                        <h3>Analyse des Retards de Livraison</h3>
+                        <p>Dashboard OTD (On-Time Delivery) de 6 pages : analyse Pareto des retards, suivi des causes, délais par chef de projet et performance de livraison par client.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - VBA : Analyse Coûts Production -->
+                <div class="project-card" data-category="vba">
+                    <div class="project-image">
+                        <img src="images/vba-analyse-couts.png" alt="Application VBA Analyse des Coûts" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-vba">Excel VBA</span>
+                        <h3>Analyse des Coûts de Production</h3>
+                        <p>Moteur VBA de 13 modules, ~40 centres de charge. Calcul du coût de revient passé de 3-4 jours/mois à quelques secondes, écart réduit de &gt;10% à &lt;3%.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>13 modules</li>
+                            <li>3-4j → secondes</li>
+                            <li>Écart &lt;3%</li>
+                            <li>40 centres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - VBA : Trésorerie -->
+                <div class="project-card" data-category="vba">
+                    <div class="project-image">
+                        <img src="images/vba-tresorerie.png" alt="Application VBA Trésorerie" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-vba">Excel VBA</span>
+                        <h3>Outil de Trésorerie</h3>
+                        <p>Application Excel avec macros VBA pour la gestion et le suivi de trésorerie, alimentant le dashboard Power BI associé avec des données structurées.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>Macros</li>
+                            <li>Flux financiers</li>
+                            <li>Automatisation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ========== ICE ETIQUETTE ========== -->
+
+                <!-- Ice 1 - Simulation Temps de Production -->
+                <div class="project-card" data-category="ice">
+                    <div class="project-image">
+                        <img src="images/ice-temps-production.png" alt="Simulation Temps de Production" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-ice">Ice Etiquettes</span>
+                        <h3>Simulation Temps de Production</h3>
+                        <p>Outil de simulation des temps de production et de gâche papier pour les deviseurs, commerciaux et la direction. Permet de déterminer la faisabilité des dossiers techniques, d'affiner les devis et de choisir la machine optimale.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>10 onglets</li>
+                            <li>6 modules VBA</li>
+                            <li>Devis</li>
+                            <li>Faisabilité</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ice 2 - Gestion Poids Encres Sigwerk -->
+                <div class="project-card" data-category="ice">
+                    <div class="project-image">
+                        <img src="images/ice-poids-sigwerk.png" alt="Gestion Poids Encres Sigwerk" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-ice">Ice Etiquettes</span>
+                        <h3>Gestion de Stockage des Encres</h3>
+                        <p>Système de stockage et suivi des encres par référence Pantone (PMS), gestion des poids et prix de vente. À chaque validation, impression automatique d'une étiquette de traçabilité indiquant l'emplacement de stockage, le numéro de lot et la date de fabrication. Réduction des pertes d'encre de plus de 30% — résultat reconnu par la direction, déclencheur d'un investissement logiciel déployé sur 5 sites.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>8 onglets</li>
+                            <li>-30% pertes</li>
+                            <li>Pantone/PMS</li>
+                            <li>Stockage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ice 3 - Saisie Production & Pointeuse -->
+                <div class="project-card" data-category="ice">
+                    <div class="project-image">
+                        <img src="images/ice-saisie-prod.png" alt="Saisie Production & Pointeuse" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-ice">Ice Etiquettes</span>
+                        <h3>Saisie Production & Pointeuse</h3>
+                        <p>Application de saisie directe par les opérateurs avec pointeuse intégrée. À la validation, une étiquette de suivi est imprimée et placée dans le dossier pour permettre à l'opérateur suivant de contrôler les données.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>5 onglets</li>
+                            <li>13 modules VBA</li>
+                            <li>Pointeuse</li>
+                            <li>Étiquette de suivi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ice 4 - Analyse & Reporting Production -->
+                <div class="project-card" data-category="ice">
+                    <div class="project-image">
+                        <img src="images/ice-reporting.png" alt="Analyse & Reporting Production" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-ice">Ice Etiquettes</span>
+                        <h3>Reporting, Suivi Machines & Opérateurs</h3>
+                        <p>Tableau de reporting central de 27 onglets : tableaux de bord, suivi de 6 machines et des opérateurs, objectifs de production, primes, non-conformités et chiffre d'affaires.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>27 onglets</li>
+                            <li>6 machines</li>
+                            <li>Reporting</li>
+                            <li>NC & Primes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ice 5 - Commande Plaques & Outils -->
+                <div class="project-card" data-category="ice">
+                    <div class="project-image">
+                        <img src="images/ice-creation-outils.png" alt="Commande Plaques & Outils" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                        <div class="project-overlay">
+                            <span class="project-view">Voir le détail</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag tag-ice">Ice Etiquettes</span>
+                        <h3>Commande Plaques & Création Outils</h3>
+                        <p>Application de commande de plaques, d'outils et de création de fiches techniques. Temps de commande réduit de plus de 10 minutes à moins de 2 minutes.</p>
+                        <ul class="skill-tags" style="margin-top: 0.8rem">
+                            <li>24 onglets</li>
+                            <li>10min → 2min</li>
+                            <li>22 000+ commandes</li>
+                            <li>Fiche technique</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section" id="a-propos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title left">À propos</h2>
+                    <p class="about-text">
+                        <strong>Eric Paysant</strong> — Data Analyst spécialisé en performance industrielle avec
+                        <strong>28 ans d'expérience terrain</strong> en environnement manufacturier. J'interviens via
+                        <strong>ERP Conseil</strong> (portage salarial Monday Portage) pour construire des systèmes
+                        décisionnels complets, de la donnée brute au tableau de bord.
+                    </p>
+                    <p class="about-text">
+                        <strong>A3D Design</strong> (2025-2026) — Tableau de bord ISO 9001 de 56 pages transformant
+                        un point critique en point fort audit. Moteur VBA réduisant le calcul de coût de revient
+                        de 3-4 jours à quelques secondes.<br>
+                        <strong>ICE Étiquettes</strong> (1996-2024) — Pipeline complet de suivi production,
+                        management de 16 personnes, projet déployé sur 5 sites déclencheur d'un investissement logiciel.
+                    </p>
+                    <div class="about-tools">
+                        <h4>Outils & Technologies</h4>
+                        <div class="tools-list">
+                            <span class="tool">Power BI</span>
+                            <span class="tool">DAX</span>
+                            <span class="tool">Power Query</span>
+                            <span class="tool">Excel avancé</span>
+                            <span class="tool">VBA</span>
+                            <span class="tool">Python</span>
+                            <span class="tool">SQL</span>
+                            <span class="tool">ODBC</span>
+                            <span class="tool">Modélisation relationnelle</span>
+                        </div>
+                    </div>
+                    <div class="about-tools">
+                        <h4>Certifications</h4>
+                        <div class="tools-list">
+                            <span class="tool">Tosa Python 3 — DAWAN</span>
+                            <span class="tool">Power BI — DataScientest</span>
+                            <span class="tool">SQL — DataScientest</span>
+                            <span class="tool">Lean Six Sigma Yellow Belt</span>
+                            <span class="tool">Initiation à la Supply Chain — Udemy</span>
+                        </div>
+                    </div>
+                    <div class="about-tools">
+                        <h4>Environnement industriel</h4>
+                        <div class="tools-list">
+                            <span class="tool">Solune</span>
+                            <span class="tool">Qualishare</span>
+                            <span class="tool">SERM</span>
+                            <span class="tool">Lean Six Sigma</span>
+                            <span class="tool">5S</span>
+                            <span class="tool">Kaizen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">mod_GenererRentabilite.bas</span>
+                        </div>
+                        <pre><code><span class="kw">Sub</span> <span class="fn">GenererRentabiliteReel</span>()
+  <span class="cm">' Analyse rentabilité réelle par commande</span>
+  <span class="kw">Dim</span> coutMO <span class="kw">As Double</span>
+  <span class="kw">Dim</span> coutST <span class="kw">As Double</span>
+  <span class="kw">Dim</span> coutComposants <span class="kw">As Double</span>
+
+  <span class="cm">' Cumul des coûts sous-produits</span>
+  coutMO = <span class="fn">GetCoutCentreCharge</span>(produit)
+  coutST = <span class="fn">GetCoutSousTraitance</span>(produit)
+  coutComposants = <span class="fn">GetCoutComposants</span>(produit)
+
+  rentabilite = prixVente - (coutMO + coutST _
+    + coutComposants)
+  <span class="cm">' Export vers Power BI &rarr;</span>
+<span class="kw">End Sub</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title">Travaillons ensemble</h2>
+            <p class="section-subtitle">Un projet de dashboard ou d'automatisation ? Parlons-en !</p>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqegjwoy" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject">
+                            <option value="">Choisir un sujet</option>
+                            <option value="powerbi">Dashboard Power BI</option>
+                            <option value="vba">Solution Excel VBA</option>
+                            <option value="analyse">Analyse de données</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>eric.paysant@outlook.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>06 21 84 90 54</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Condat-sur-Vienne (87)</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/ericpaysant" target="_blank" style="color: var(--accent-1)">linkedin.com/in/ericpaysant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">ERP <span class="dot">Conseil</span></p>
+                <p>&copy; 2026 Eric Paysant — ERP Conseil | Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-image">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag" id="modalTag"></span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-tags" id="modalTags"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
