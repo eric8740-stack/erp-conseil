@@ -327,6 +327,187 @@ img {
     padding: 6rem 2rem;
 }
 
+/* ============================================
+   ACCORDION VITRINE
+   ============================================ */
+.accordion {
+    display: flex;
+    gap: 8px;
+    height: 450px;
+    width: 100%;
+}
+
+.accordion-item {
+    position: relative;
+    flex: 0.5;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: white;
+}
+
+.accordion-item:hover,
+.accordion-item.active {
+    flex: 4;
+}
+
+.accordion-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.accordion-item:hover img {
+    transform: scale(1.05);
+}
+
+.accordion-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 100%);
+    transition: background 0.5s ease;
+}
+
+.accordion-item:hover .accordion-overlay,
+.accordion-item.active .accordion-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+}
+
+.accordion-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease 0.2s;
+    z-index: 2;
+}
+
+.accordion-item:hover .accordion-tag,
+.accordion-item.active .accordion-tag {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tag-pbi { background: rgba(99,102,241,0.9); color: white; }
+.tag-acc-vba { background: rgba(6,182,212,0.9); color: white; }
+.tag-acc-ice { background: rgba(16,185,129,0.9); color: white; }
+
+.accordion-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease 0.15s;
+}
+
+.accordion-item:hover .accordion-caption,
+.accordion-item.active .accordion-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.accordion-caption h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: white;
+}
+
+.accordion-caption p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease 0.3s;
+}
+
+.accordion-item:hover .accordion-caption p,
+.accordion-item.active .accordion-caption p {
+    max-height: 100px;
+}
+
+.accordion-title-vertical {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    white-space: nowrap;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    transform-origin: center center;
+}
+
+.accordion-item:hover .accordion-title-vertical,
+.accordion-item.active .accordion-title-vertical {
+    opacity: 0;
+}
+
+.accordion-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease 0.35s;
+}
+
+.accordion-item:hover .accordion-badges,
+.accordion-item.active .accordion-badges {
+    max-height: 50px;
+}
+
+.accordion-badges span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        flex-direction: column;
+        height: auto;
+    }
+    .accordion-item {
+        height: 80px;
+        flex: none !important;
+        transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .accordion-item:hover,
+    .accordion-item.active {
+        height: 300px;
+    }
+    .accordion-title-vertical {
+        transform: translateX(-50%) rotate(0deg);
+        bottom: 50%;
+        translate: 0 50%;
+    }
+}
+
 .section-dark {
     background: var(--bg-secondary);
 }
