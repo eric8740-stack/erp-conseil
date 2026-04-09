@@ -129,12 +129,14 @@ projectCards.forEach(card => {
         const tags = info.querySelectorAll('.skill-tags li');
 
         // Set modal image
-        if (img && img.style.display !== 'none') {
+        if (img && img.style.display !== 'none' && img.naturalWidth > 0) {
             modalImg.src = img.src;
             modalImg.alt = img.alt;
             modalImg.style.display = 'block';
+            modalImg.parentElement.style.display = 'flex';
         } else {
             modalImg.style.display = 'none';
+            modalImg.parentElement.style.display = 'none';
         }
 
         // Set tag with correct class
@@ -195,9 +197,6 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-
     // Show success message
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
@@ -215,9 +214,5 @@ contactForm.addEventListener('submit', (e) => {
 // SMOOTH REVEAL ON LOAD
 // ============================================
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    requestAnimationFrame(() => {
-        document.body.style.opacity = '1';
-    });
+    document.body.classList.add('loaded');
 });
