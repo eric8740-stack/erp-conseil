@@ -176,6 +176,18 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
+// ACCORDION VITRINE
+// ============================================
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        accordionItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+
+// ============================================
 // CONTACT FORM
 // ============================================
 const contactForm = document.getElementById('contactForm');
