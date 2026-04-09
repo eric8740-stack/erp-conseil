@@ -178,6 +178,32 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
+// SKILL PREVIEW (image flottante au survol)
+// ============================================
+const skillPreview = document.getElementById('skillPreview');
+const skillPreviewImg = document.getElementById('skillPreviewImg');
+
+if (skillPreview) {
+    const previewCards = document.querySelectorAll('.skill-card[data-preview]');
+
+    previewCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            skillPreviewImg.src = card.dataset.preview;
+            skillPreview.classList.add('active');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            skillPreview.classList.remove('active');
+        });
+
+        card.addEventListener('mousemove', (e) => {
+            skillPreview.style.left = (e.clientX + 20) + 'px';
+            skillPreview.style.top = (e.clientY - 100) + 'px';
+        });
+    });
+}
+
+// ============================================
 // ACCORDION VITRINE
 // ============================================
 const accordionItems = document.querySelectorAll('.accordion-item');
