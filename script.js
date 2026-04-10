@@ -243,9 +243,10 @@ const RATING_API = 'https://script.google.com/macros/s/AKfycbzpOta4QQ1rhijm5v1zt
 
 // Load average on page load
 function loadRating() {
-    fetch(RATING_API)
-        .then(r => r.json())
-        .then(data => {
+    fetch(RATING_API, { redirect: 'follow' })
+        .then(r => r.text())
+        .then(text => {
+            var data = JSON.parse(text);
             document.getElementById('ratingAvg').textContent = data.moyenne || '-';
             document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
         })
@@ -291,9 +292,10 @@ stars.forEach(star => {
 
         fetch(RATING_API, {
             method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify({ note: note }),
         })
-        .then(r => r.json())
         .then(() => {
             if (msg) msg.textContent = 'Merci pour votre avis !';
             localStorage.setItem('portfolio_voted', note);
