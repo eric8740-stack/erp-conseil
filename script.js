@@ -239,7 +239,7 @@ contactForm.addEventListener('submit', (e) => {
 // ============================================
 // RATING WIDGET
 // ============================================
-const RATING_API = 'https://script.google.com/macros/s/AKfycbzpOta4QQ1rhijm5v1zt6hMv5NVhbzM1iLrgZlVK4ay2iMyheYQ0lSNbAbW44OHfU0/exec';
+const RATING_API = 'https://script.google.com/macros/s/AKfycbzmMe6-52tutPDea7KSOmTg7EvkCJcXkEouqy5qP5m4LzoaSbKz2Bf8McFi-45sHf8/exec';
 
 // Load ratings and reviews
 function loadRating() {
