@@ -237,6 +237,78 @@ contactForm.addEventListener('submit', (e) => {
 });
 
 // ============================================
+// RATING WIDGET
+// ============================================
+const RATING_API = 'https://script.google.com/macros/s/AKfycbxllurw2aotR-KQ3a9v1mHsS7XrfK-B6h7Y_4-8oKzvKCTXN-vB_ocxIt8fZpNLX1/exec';
+
+// Load average on page load
+function loadRating() {
+    fetch(RATING_API)
+        .then(r => r.json())
+        .then(data => {
+            document.getElementById('ratingAvg').textContent = data.moyenne || '-';
+            document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
+        })
+        .catch(() => {});
+}
+
+// Star interactions
+const stars = document.querySelectorAll('.star');
+let hasVoted = localStorage.getItem('portfolio_voted');
+
+if (hasVoted) {
+    stars.forEach(s => {
+        s.classList.add('voted');
+        if (parseInt(s.dataset.value) <= parseInt(hasVoted)) s.classList.add('active');
+    });
+    const msg = document.getElementById('ratingMessage');
+    if (msg) msg.textContent = 'Merci pour votre avis !';
+}
+
+stars.forEach(star => {
+    star.addEventListener('mouseenter', () => {
+        if (hasVoted) return;
+        const val = parseInt(star.dataset.value);
+        stars.forEach(s => s.classList.toggle('hover', parseInt(s.dataset.value) <= val));
+    });
+
+    star.addEventListener('mouseleave', () => {
+        if (hasVoted) return;
+        stars.forEach(s => s.classList.remove('hover'));
+    });
+
+    star.addEventListener('click', () => {
+        if (hasVoted) return;
+        const note = parseInt(star.dataset.value);
+
+        stars.forEach(s => {
+            s.classList.add('voted');
+            s.classList.toggle('active', parseInt(s.dataset.value) <= note);
+        });
+
+        const msg = document.getElementById('ratingMessage');
+        if (msg) msg.textContent = 'Envoi en cours...';
+
+        fetch(RATING_API, {
+            method: 'POST',
+            body: JSON.stringify({ note: note }),
+        })
+        .then(r => r.json())
+        .then(() => {
+            if (msg) msg.textContent = 'Merci pour votre avis !';
+            localStorage.setItem('portfolio_voted', note);
+            hasVoted = note;
+            loadRating();
+        })
+        .catch(() => {
+            if (msg) msg.textContent = 'Erreur, réessayez plus tard.';
+        });
+    });
+});
+
+loadRating();
+
+// ============================================
 // SMOOTH REVEAL ON LOAD
 // ============================================
 window.addEventListener('load', () => {
