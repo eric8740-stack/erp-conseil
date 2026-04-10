@@ -714,25 +714,42 @@
     </section>
 
     <!-- Footer -->
-    <!-- Rating -->
+    <!-- Avis -->
     <section class="section" id="avis">
         <div class="container">
-            <div class="rating-box">
-                <h2 class="rating-title">Votre avis compte</h2>
-                <p class="rating-subtitle">Comment trouvez-vous ce portfolio ?</p>
-                <div class="rating-display">
-                    <span class="rating-avg" id="ratingAvg">-</span>
-                    <span class="rating-avg-label">/ 5</span>
-                    <span class="rating-count" id="ratingCount">(0 avis)</span>
+            <h2 class="section-title">Avis & Témoignages</h2>
+            <p class="section-subtitle">Ce que pensent les visiteurs de ce portfolio</p>
+
+            <div class="avis-layout">
+                <!-- Formulaire -->
+                <div class="rating-box" id="ratingBox">
+                    <div class="rating-display">
+                        <span class="rating-avg" id="ratingAvg">-</span>
+                        <span class="rating-avg-label">/ 5</span>
+                        <span class="rating-count" id="ratingCount">(0 avis)</span>
+                    </div>
+                    <div class="rating-stars" id="ratingStars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <div class="avis-form" id="avisForm">
+                        <input type="text" id="avisNom" class="avis-input" placeholder="Votre nom (facultatif)" maxlength="50">
+                        <textarea id="avisCommentaire" class="avis-textarea" placeholder="Votre commentaire..." maxlength="300" rows="3"></textarea>
+                        <button class="btn btn-primary btn-full" id="avisSubmit" disabled>Laisser mon avis</button>
+                    </div>
+                    <p class="rating-message" id="ratingMessage"></p>
                 </div>
-                <div class="rating-stars" id="ratingStars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
+
+                <!-- Derniers avis -->
+                <div class="avis-list" id="avisList">
+                    <h3 class="avis-list-title">Derniers avis</h3>
+                    <div class="avis-items" id="avisItems">
+                        <p class="avis-empty">Aucun avis pour le moment. Soyez le premier !</p>
+                    </div>
                 </div>
-                <p class="rating-message" id="ratingMessage"></p>
             </div>
         </div>
     </section>
