@@ -241,7 +241,7 @@ contactForm.addEventListener('submit', (e) => {
 // ============================================
 const RATING_API = 'https://script.google.com/macros/s/AKfycbzpOta4QQ1rhijm5v1zt6hMv5NVhbzM1iLrgZlVK4ay2iMyheYQ0lSNbAbW44OHfU0/exec';
 
-// Load average on page load
+// Load ratings and reviews
 function loadRating() {
     fetch(RATING_API, { redirect: 'follow' })
         .then(r => r.text())
@@ -259,11 +259,32 @@ function loadRating() {
                     navStars.innerHTML += '<span style="color:' + (i <= filled ? '#f59e0b' : '#4a4a5a') + '">&#9733;</span>';
                 }
             }
-            // Fill stars based on average
             if (!hasVoted && data.moyenne > 0) {
                 document.querySelectorAll('.star').forEach(s => {
                     s.classList.toggle('active', parseInt(s.dataset.value) <= Math.round(data.moyenne));
                 });
+            }
+            // Render reviews
+            if (data.avis && data.avis.length > 0) {
+                var container = document.getElementById('avisItems');
+                if (container) {
+                    container.innerHTML = '';
+                    data.avis.forEach(function(a) {
+                        var starsHtml = '';
+                        for (var i = 1; i <= 5; i++) {
+                            starsHtml += '<span style="color:' + (i <= a.note ? '#f59e0b' : '#4a4a5a') + '">&#9733;</span>';
+                        }
+                        var html = '<div class="avis-item">' +
+                            '<div class="avis-item-header">' +
+                            '<span class="avis-item-name">' + (a.nom || 'Anonyme') + '</span>' +
+                            '<span class="avis-item-stars">' + starsHtml + '</span>' +
+                            '</div>' +
+                            '<span class="avis-item-date">' + (a.date || '') + '</span>' +
+                            (a.commentaire ? '<p class="avis-item-text">' + a.commentaire + '</p>' : '') +
+                            '</div>';
+                        container.innerHTML += html;
+                    });
+                }
             }
         })
         .catch(() => {});
@@ -272,13 +293,17 @@ function loadRating() {
 // Star interactions
 const stars = document.querySelectorAll('.star');
 let hasVoted = localStorage.getItem('portfolio_voted');
+let selectedNote = 0;
+const avisSubmit = document.getElementById('avisSubmit');
 
 if (hasVoted) {
     stars.forEach(s => {
         s.classList.add('voted');
         if (parseInt(s.dataset.value) <= parseInt(hasVoted)) s.classList.add('active');
     });
-    const msg = document.getElementById('ratingMessage');
+    var form = document.getElementById('avisForm');
+    if (form) form.style.display = 'none';
+    var msg = document.getElementById('ratingMessage');
     if (msg) msg.textContent = 'Merci pour votre avis !';
 }
 
@@ -296,33 +321,45 @@ stars.forEach(star => {
 
     star.addEventListener('click', () => {
         if (hasVoted) return;
-        const note = parseInt(star.dataset.value);
+        selectedNote = parseInt(star.dataset.value);
+        stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= selectedNote));
+        if (avisSubmit) avisSubmit.disabled = false;
+    });
+});
 
-        stars.forEach(s => {
-            s.classList.add('voted');
-            s.classList.toggle('active', parseInt(s.dataset.value) <= note);
-        });
+// Submit review
+if (avisSubmit) {
+    avisSubmit.addEventListener('click', () => {
+        if (hasVoted || selectedNote === 0) return;
+        var nom = (document.getElementById('avisNom').value || '').trim();
+        var commentaire = (document.getElementById('avisCommentaire').value || '').trim();
+        var msg = document.getElementById('ratingMessage');
 
-        const msg = document.getElementById('ratingMessage');
-        if (msg) msg.textContent = 'Envoi en cours...';
+        avisSubmit.disabled = true;
+        avisSubmit.textContent = 'Envoi en cours...';
 
         fetch(RATING_API, {
             method: 'POST',
             mode: 'no-cors',
             headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify({ note: note }),
+            body: JSON.stringify({ note: selectedNote, nom: nom || 'Anonyme', commentaire: commentaire }),
         })
         .then(() => {
             if (msg) msg.textContent = 'Merci pour votre avis !';
-            localStorage.setItem('portfolio_voted', note);
-            hasVoted = note;
-            loadRating();
+            localStorage.setItem('portfolio_voted', selectedNote);
+            hasVoted = selectedNote;
+            stars.forEach(s => s.classList.add('voted'));
+            var form = document.getElementById('avisForm');
+            if (form) form.style.display = 'none';
+            setTimeout(loadRating, 2000);
         })
         .catch(() => {
             if (msg) msg.textContent = 'Erreur, réessayez plus tard.';
+            avisSubmit.disabled = false;
+            avisSubmit.textContent = 'Laisser mon avis';
         });
     });
-});
+}
 
 loadRating();
 setTimeout(loadRating, 3000);

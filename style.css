@@ -1213,14 +1213,19 @@ img {
 /* ============================================
    RATING
    ============================================ */
+.avis-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
 .rating-box {
-    max-width: 500px;
-    margin: 0 auto;
     text-align: center;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -1233,18 +1238,6 @@ img {
     right: 0;
     height: 3px;
     background: var(--gradient);
-}
-
-.rating-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 0.3rem;
-}
-
-.rating-subtitle {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
 }
 
 .rating-display {
@@ -1305,6 +1298,117 @@ img {
     color: var(--accent-1);
     min-height: 1.4rem;
     font-weight: 500;
+}
+
+/* Avis Form */
+.avis-form {
+    margin-top: 1rem;
+}
+
+.avis-input,
+.avis-textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    outline: none;
+    margin-bottom: 0.8rem;
+}
+
+.avis-input:focus,
+.avis-textarea:focus {
+    border-color: var(--accent-1);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.avis-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Avis List */
+.avis-list {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.avis-list-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.avis-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.avis-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.2rem;
+    transition: var(--transition);
+}
+
+.avis-item:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.avis-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.avis-item-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.avis-item-stars {
+    color: #f59e0b;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.avis-item-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.avis-item-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.4rem;
+}
+
+.avis-empty {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .avis-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================
