@@ -251,6 +251,12 @@ function loadRating() {
             document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
             var navRating = document.getElementById('navRating');
             if (navRating) navRating.textContent = data.moyenne || '-';
+            // Fill stars based on average
+            if (!hasVoted && data.moyenne > 0) {
+                document.querySelectorAll('.star').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value) <= Math.round(data.moyenne));
+                });
+            }
         })
         .catch(() => {});
 }
