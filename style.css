@@ -149,6 +149,11 @@ img {
     display: none !important;
 }
 
+.nav-stars {
+    letter-spacing: 1px;
+    color: #4a4a5a;
+}
+
 .nav-cta {
     background: var(--accent-1) !important;
     color: white !important;

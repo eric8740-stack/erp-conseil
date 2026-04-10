@@ -251,6 +251,14 @@ function loadRating() {
             document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
             var navRating = document.getElementById('navRating');
             if (navRating) navRating.textContent = data.moyenne || '-';
+            var navStars = document.getElementById('navStars');
+            if (navStars && data.moyenne > 0) {
+                var filled = Math.round(data.moyenne);
+                navStars.innerHTML = '';
+                for (var i = 1; i <= 5; i++) {
+                    navStars.innerHTML += '<span style="color:' + (i <= filled ? '#f59e0b' : '#4a4a5a') + '">&#9733;</span>';
+                }
+            }
             // Fill stars based on average
             if (!hasVoted && data.moyenne > 0) {
                 document.querySelectorAll('.star').forEach(s => {
