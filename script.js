@@ -249,6 +249,8 @@ function loadRating() {
             var data = JSON.parse(text);
             document.getElementById('ratingAvg').textContent = data.moyenne || '-';
             document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
+            var navRating = document.getElementById('navRating');
+            if (navRating) navRating.textContent = data.moyenne || '-';
         })
         .catch(() => {});
 }

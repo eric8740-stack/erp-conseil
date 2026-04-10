@@ -129,6 +129,26 @@ img {
     width: 100%;
 }
 
+.nav-rating {
+    color: #f59e0b !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    transition: var(--transition);
+}
+
+.nav-rating:hover {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.5);
+}
+
+.nav-rating::after {
+    display: none !important;
+}
+
 .nav-cta {
     background: var(--accent-1) !important;
     color: white !important;
