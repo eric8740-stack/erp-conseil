@@ -85,7 +85,19 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 /* ---------- HÉROS ---------- */
 .hero {
   position: relative; overflow: hidden;
-  padding: 96px 0 88px; text-align: center;
+  padding: 62px 0 56px; text-align: center;
+}
+.hero-visual {
+  display: block; max-width: 720px; margin: 40px auto 0;
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line); box-shadow: var(--shadow);
+  background: #000; transition: transform .15s ease, border-color .15s ease;
+}
+.hero-visual:hover { transform: translateY(-3px); border-color: rgba(255,216,77,.45); }
+.hero-visual img { width: 100%; display: block; }
+.hero-visual-cap {
+  display: block; padding: 9px 12px; font-size: .8rem; color: var(--muted);
+  background: rgba(0,0,0,.35); border-top: 1px solid var(--line);
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -204,6 +216,9 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 /* ---------- CONTACT ---------- */
 .contact h2 { margin-bottom: 10px; }
 .center-actions { justify-content: center; }
+.contact-alt { margin-top: 16px; color: var(--muted); font-size: .92rem; }
+.contact-alt a { color: var(--yellow); font-weight: 600; }
+.contact-alt a:hover { text-decoration: underline; }
 
 /* ---------- FOOTER ---------- */
 .footer {
