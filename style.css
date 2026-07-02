@@ -178,10 +178,10 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .about { display: grid; gap: 30px; grid-template-columns: 1fr; align-items: center; }
 .about-photo {
   width: 128px; height: 128px; border-radius: 50%;
-  background: linear-gradient(150deg, var(--yellow), #e0a800);
-  color: #2a2200; font-weight: 900; font-size: 2.6rem;
-  display: grid; place-items: center; box-shadow: var(--shadow);
+  overflow: hidden; box-shadow: var(--shadow);
+  border: 1px solid var(--line);
 }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
 .about-text p { color: var(--muted-2); margin-bottom: 14px; }
 .link-linkedin { color: var(--yellow); font-weight: 700; }
 .link-linkedin:hover { text-decoration: underline; }
