@@ -14,6 +14,28 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="canonical" href="https://eric8740-stack.github.io/erp-conseil/">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+
+    <!-- Référencement local (données structurées) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ERP Conseil — Eric Paysant",
+      "description": "Transformation de fichiers Excel métier en applications de gestion simples, rapides et stables pour TPE/PME. Data analytics, Power BI, automatisation.",
+      "url": "https://eric8740-stack.github.io/erp-conseil/",
+      "image": "https://eric8740-stack.github.io/erp-conseil/images/og-image.png",
+      "email": "eric.paysant@outlook.fr",
+      "telephone": "+33621849054",
+      "address": { "@type": "PostalAddress", "addressLocality": "Condat-sur-Vienne", "postalCode": "87920", "addressRegion": "Haute-Vienne", "addressCountry": "FR" },
+      "areaServed": "Limoges et Haute-Vienne, intervention à distance partout en France",
+      "founder": { "@type": "Person", "name": "Eric Paysant", "jobTitle": "Consultant data / développeur", "sameAs": "https://www.linkedin.com/in/ericpaysant" },
+      "priceRange": "Devis fixe après diagnostic gratuit"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -154,6 +176,15 @@
         </div>
     </section>
 
+    <!-- ============ 5bis. AVIS CLIENTS (rempli dynamiquement, masqué si vide) ============ -->
+    <section class="section" id="avis" hidden>
+        <div class="wrap">
+            <h2>Ils m'ont fait confiance</h2>
+            <p class="avis-sub">Avis recueillis après chaque mission via mon formulaire de satisfaction.</p>
+            <div class="avis-grid" id="avisGrid"></div>
+        </div>
+    </section>
+
     <!-- ============ 6. QUI JE SUIS ============ -->
     <section class="section" id="apropos">
         <div class="wrap about">
@@ -207,6 +238,32 @@
         <p>Eric Paysant · ERP Conseil — applications de gestion pour TPE/PME</p>
         <p class="footer-fine">Démo publique : <a href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener">tresorerie.apppreview.fr</a> · données 100 % fictives.</p>
     </footer>
+
+    <!-- Avis clients publiés (route publique : uniquement les avis avec accord de publication) -->
+    <script>
+    (function(){
+        var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzf_x0Q264sFriUASS5Xo1dsBIl1J93rBONiGTBxAaxm17sKuwCLhPc6EwIVGgxpAQeGA/exec';
+        function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+            return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+        function stars(n){ n = Math.max(0, Math.min(5, Math.round(Number(n)||0)));
+            return '★★★★★'.slice(0,n) + '<span class="star-off">' + '★★★★★'.slice(n) + '</span>'; }
+        fetch(ENDPOINT + '?public=avis')
+            .then(function(r){ return r.json(); })
+            .then(function(data){
+                if(!data.ok || !data.records || !data.records.length) return;
+                var cards = data.records.slice(0, 6).map(function(a){
+                    return '<figure class="avis-card">'
+                        + '<div class="avis-stars">' + stars(a.note) + '</div>'
+                        + (a.commentaire ? '<blockquote>« ' + esc(a.commentaire) + ' »</blockquote>' : '')
+                        + '<figcaption>— ' + esc(a.client || 'Client') + (a.mission ? ' · ' + esc(a.mission) : '') + '</figcaption>'
+                        + '</figure>';
+                }).join('');
+                document.getElementById('avisGrid').innerHTML = cards;
+                document.getElementById('avis').hidden = false;
+            })
+            .catch(function(){ /* section absente si l'endpoint ne répond pas */ });
+    })();
+    </script>
 
     <!-- Mesure d'audience sans cookie (GoatCounter) -->
     <script data-goatcounter="https://erp-conseil.goatcounter.com/count"

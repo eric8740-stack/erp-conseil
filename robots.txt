@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eric8740-stack.github.io/erp-conseil/sitemap.xml
