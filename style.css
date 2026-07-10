@@ -229,11 +229,24 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .footer a { color: var(--muted-2); }
 .footer a:hover { color: var(--yellow); }
 
+/* ---------- Avis clients (section dynamique) ---------- */
+.avis-sub { color: var(--muted); margin: -18px 0 26px; }
+.avis-grid { display: grid; gap: 18px; }
+.avis-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.avis-stars { color: var(--yellow); letter-spacing: 3px; font-size: 1.05rem; margin-bottom: 10px; }
+.avis-stars .star-off { color: var(--line); }
+.avis-card blockquote { font-style: italic; color: var(--muted-2); }
+.avis-card figcaption { margin-top: 12px; color: var(--muted); font-size: .9rem; }
+
 /* ============================================================
    Desktop / tablette
    ============================================================ */
 @media (min-width: 720px) {
   .ba-grid { grid-template-columns: 1fr 1fr; }
+  .avis-grid { grid-template-columns: 1fr 1fr 1fr; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
   .about { grid-template-columns: 160px 1fr; }
   .about-photo { width: 160px; height: 160px; }
