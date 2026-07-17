@@ -108,7 +108,8 @@ pour mémoire.)
 
 ---
 
-## Lot 1 — textes complets (rédigés 17/07, EN VALIDATION chez Eric)
+## Lot 1 — textes complets (rédigés 17/07, VALIDÉS par Eric le 17/07 ;
+## visuels posts 2 et 5 validés le 17/07 — images/posts/ du dépôt)
 
 ### Post 2 — lundi 20/07 (texte final proposé)
 
