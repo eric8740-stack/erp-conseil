@@ -105,3 +105,101 @@ pour mémoire.)
 - P1 : avant/après d'un écran de saisie (double saisie supprimée).
 - P2 : « La macro qui a survécu à 3 stagiaires » — documentation et pérennité.
 - P4 : import CSV automatique : de la boîte mail au tableau de bord sans main.
+
+---
+
+## Lot 1 — textes complets (rédigés 17/07, EN VALIDATION chez Eric)
+
+### Post 2 — lundi 20/07 (texte final proposé)
+
+3 signes que votre fichier Excel est devenu dangereux pour votre entreprise.
+
+1. Une seule personne sait s'en servir. Si elle est absente, tout attend son retour.
+
+2. Plus personne n'ose toucher aux formules. Alors on contourne, on bricole à côté, on multiplie les onglets.
+
+3. Deux versions circulent. Et personne ne sait laquelle est la bonne.
+
+Aucun de ces signes ne fait de bruit. C'est pour ça qu'on les ignore — jusqu'au jour où ça coûte une journée. Ou un client.
+
+La bonne nouvelle : un fichier qui coche ces cases n'est pas à jeter. C'est un cahier des charges déjà écrit. Vos règles de gestion sont dedans — il ne reste qu'à les installer dans un outil fiable.
+
+Combien de cases cochez-vous ?
+
+#Excel #TPE #PME #gestion
+
+_Visuel : gabarit bannière, les 3 signes._
+
+### Post 3 — mercredi 22/07 (texte final proposé)
+
+Ce post a été publié par un robot, ce matin à 8h30 précises.
+
+Je l'ai écrit. Je l'ai validé. Puis un petit automate s'est chargé du reste : récupérer le texte, attacher l'image, publier à l'heure dite.
+
+Ce n'est pas de la magie, ni de l'IA qui écrit à ma place. C'est de la logistique automatisée : le travail reste humain, la corvée disparaît.
+
+Le même principe s'applique à vos rapports : le tableau de bord qui part chaque lundi matin, l'export comptable de fin de mois, la relance des factures en retard.
+
+Écrire le rapport, c'est du métier. L'envoyer tous les lundis à 7h, c'est de la logistique.
+
+Quelle tâche répétitive vous vole une heure par semaine ?
+
+#automatisation #TPE #PME #productivité
+
+_Visuel : capture du schéma du workflow n8n (sans URL/identifiants)._
+
+### Post 4 — vendredi 24/07 (texte final proposé)
+
+Le chiffre que tout dirigeant devrait voir chaque lundi matin — et que presque personne ne regarde :
+
+combien d'heures mon équipe a réellement produites, par rapport à ce qu'elle peut produire.
+
+Sur le papier, la réponse semble simple. Dans la vraie vie : les heures ne sont pas toutes pointées, les machines tournent sans être mesurées, et le carnet de commandes dit une chose pendant que l'atelier en vit une autre.
+
+Résultat : un atelier peut être saturé sur ses machines et paraître vide dans les tableaux. On embauche trop tard — ou on refuse du travail pour rien.
+
+L'écran ci-dessous vient d'une démo (données fictives) : heures pointées, couverture facturée et occupation machines, côte à côte, mois par mois. Trois mesures croisées valent mieux qu'une impression.
+
+Vous pilotez à la sensation, ou à la mesure ?
+
+#PowerBI #PME #industrie #pilotage
+
+_Visuel : écran « Charge » de la démo publique Pilotage PME (données fictives)._
+
+### Post 5 — lundi 27/07 (texte final proposé)
+
+Une cellule effacée. À trois semaines de la clôture.
+
+Personne ne sait ce qu'il y avait dedans.
+
+Le classeur est partagé, la formule a été écrasée un mardi, découverte un vendredi. Entre les deux : trois jours de chiffres faux, et une journée entière à reconstituer ce qui avait disparu.
+
+Cette histoire est un condensé de situations que je croise régulièrement. Les détails changent, le scénario jamais.
+
+Le vrai coût d'un fichier fragile ne se voit sur aucune facture. Il s'appelle : temps perdu, chiffres douteux, décisions retardées.
+
+Votre fichier vous a rendu service pendant des années. Il mérite mieux qu'un accident silencieux.
+
+Diagnostic gratuit : on regarde votre fichier ensemble, et je vous dis honnêtement s'il faut le consolider ou le transformer.
+
+#Excel #TPE #PME #gestion
+
+_Visuel : gabarit bannière — « Le coût d'un fichier fragile ne se voit sur aucune facture. »_
+
+### Post 6 — mercredi 29/07 (texte final proposé)
+
+Un devis en 3 clics, au lieu de 20 minutes de recopie.
+
+Avant : chercher l'ancien devis qui ressemble, copier-coller, modifier les quantités, refaire les calculs, espérer n'avoir rien oublié.
+
+Après : un formulaire. Le client, les articles, les quantités. Les prix se calculent seuls, l'historique se retrouve en une recherche.
+
+Le détail qui change tout, ce n'est pas la technologie. C'est que l'outil connaît VOS règles : vos marges, vos minimums, vos conditions. Celles qui étaient éparpillées dans le fichier Excel — et dans la tête de celui qui l'a construit.
+
+(Capture ci-dessous : démo, données fictives.)
+
+C'est votre façon de travailler d'aujourd'hui, en mieux organisée. Pas un logiciel de plus à apprendre.
+
+#TPE #PME #devis #gestion
+
+_Visuel : capture rapprochée de l'écran devis (démo, données fictives)._
