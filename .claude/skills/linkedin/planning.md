@@ -15,9 +15,20 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
 
 ---
 
-## Lot 1 — semaines du 20 et du 27 juillet 2026 (statut : BROUILLON, à valider)
+## Lot 1 — du 17 au 29 juillet 2026
 
-### Post 1 — lundi 20/07 · Pilier 1 (démo)
+### Post 1 — ✅ PUBLIÉ vendredi 17/07 ~10h45 · Pilier 1 (démo)
+
+> Premier post de la machine — a servi de test réel de bout en bout du
+> workflow n8n (succès complet : image téléchargée, publication texte+image,
+> ligne passée à « publié »). 165 impressions dans les 3 premières minutes.
+
+Les posts suivants sont décalés en conséquence : post 2 → lundi 20/07,
+post 3 → mercredi 22/07, post 4 → vendredi 24/07, post 5 → lundi 27/07,
+post 6 → mercredi 29/07. (Détail d'origine du post 1 conservé ci-dessous
+pour mémoire.)
+
+### Post 1 (détail d'origine)
 - **Accroche** : « Ce fichier Excel de trésorerie a 20 ans. Il tient toute
   l'entreprise. Et une seule personne sait s'en servir. »
 - **Angle** : l'étude de cas du site — l'Excel historique devenu application
@@ -27,7 +38,7 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
 - **Chute** : « Votre fichier a rendu service pendant des années. Il mérite
   une retraite, pas un enterrement. »
 
-### Post 2 — mercredi 22/07 · Pilier 2 (Excel)
+### Post 2 — lundi 20/07 · Pilier 2 (Excel)
 - **Accroche** : « 3 signes que votre fichier Excel est devenu dangereux
   pour votre entreprise. »
 - **Angle** : liste courte — 1) une seule personne sait s'en servir,
@@ -36,7 +47,7 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
 - **Visuel** : gabarit bannière (fond sombre) avec les 3 signes.
 - **Chute** : question ouverte « Combien de cases cochez-vous ? »
 
-### Post 3 — vendredi 24/07 · Pilier 4 (automatisation)
+### Post 3 — mercredi 22/07 · Pilier 4 (automatisation)
 - **Accroche** : « Ce post a été publié par un robot. Je l'ai écrit, il l'a
   posté à 8h30 pendant que je travaillais chez un client. »
 - **Angle** : coulisses du système de publication (calendrier → validation →
@@ -46,7 +57,7 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
   identifiants visibles).
 - **Chute** : « Quelle tâche répétitive vous vole une heure par semaine ? »
 
-### Post 4 — lundi 27/07 · Pilier 3 (Power BI / indicateurs)
+### Post 4 — vendredi 24/07 · Pilier 3 (Power BI / indicateurs)
 - **Accroche** : « Le chiffre que tout dirigeant devrait voir chaque lundi
   matin — et que presque personne ne regarde. »
 - **Angle** : la charge de travail réelle vs la capacité (heures facturées ÷
@@ -57,7 +68,7 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
   fictives), écran de jauge d'occupation.
 - **Chute** : « Vous pilotez à la sensation ou à la mesure ? »
 
-### Post 5 — mercredi 29/07 · Pilier 2 (Excel)
+### Post 5 — lundi 27/07 · Pilier 2 (Excel)
 - **Accroche** : « Une cellule effacée. À trois semaines de la clôture.
   Personne ne sait ce qu'il y avait dedans. »
 - **Angle** : mini-récit (situation composite, aucune entreprise
@@ -69,7 +80,7 @@ _(aucune encore — première revue prévue après 6 posts publiés)_
 - **Chute** : promesse + « diagnostic gratuit, on regarde votre fichier
   ensemble ».
 
-### Post 6 — vendredi 31/07 · Pilier 1 (démo)
+### Post 6 — mercredi 29/07 · Pilier 1 (démo)
 - **Accroche** : « Un devis en 3 clics au lieu de 20 minutes de recopie. »
 - **Angle** : détail d'écran qui donne envie — un formulaire de devis
   (démo, données fictives) : champs pré-remplis, calculs instantanés,
