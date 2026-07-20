@@ -237,6 +237,25 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .footer-fine { margin-top: 6px; font-size: .82rem; }
 .footer a { color: var(--muted-2); }
 .footer a:hover { color: var(--yellow); }
+.footer-legal { margin-top: 10px; font-size: .78rem; color: var(--muted); }
+
+/* Mentions légales (dépliable) */
+.legal { max-width: 780px; margin: 18px auto 0; text-align: left; }
+.legal summary {
+  cursor: pointer; list-style: none; text-align: center;
+  font-size: .82rem; font-weight: 600; color: var(--muted);
+}
+.legal summary::-webkit-details-marker { display: none; }
+.legal summary::after { content: " +"; color: var(--yellow); }
+.legal[open] summary::after { content: " –"; }
+.legal summary:hover { color: var(--text); }
+.legal-body {
+  margin-top: 14px; padding: 18px 22px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+}
+.legal-body p { font-size: .8rem; color: var(--muted); margin-bottom: 10px; line-height: 1.55; }
+.legal-body p:last-child { margin-bottom: 0; }
+.legal-body b { color: var(--muted-2); }
 
 /* ---------- Avis clients (section dynamique) ---------- */
 .avis-sub { color: var(--muted); margin: -18px 0 26px; }
