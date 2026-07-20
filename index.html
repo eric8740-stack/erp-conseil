@@ -49,6 +49,7 @@
         <nav class="nav-links">
             <a href="#cas">Étude de cas</a>
             <a href="#methode">Comment ça marche</a>
+            <a href="#confidentialite">Confidentialité</a>
             <a href="#apropos">Qui je suis</a>
             <a href="https://eric8740-stack.github.io/erp-conseil-app/demande.html" target="_blank" rel="noopener" class="nav-cta">Demander un devis</a>
         </nav>
@@ -176,7 +177,48 @@
         </div>
     </section>
 
-    <!-- ============ 5bis. AVIS CLIENTS (rempli dynamiquement, masqué si vide) ============ -->
+    <!-- ============ 5bis. CONFIDENTIALITÉ ============ -->
+    <section class="section" id="confidentialite">
+        <div class="wrap">
+            <p class="eyebrow">Confidentialité</p>
+            <h2>Vos données restent les vôtres</h2>
+            <p class="switch">Pour transformer votre fichier Excel en application, j'ai besoin de sa <b>structure</b> — pas de vos <b>données</b>.</p>
+            <p class="conf-intro">Je regarde comment votre outil est construit (colonnes, calculs, enchaînement des onglets). Pas ce qu'il contient (salaires, noms, montants, coordonnées bancaires). Autrement dit : je peux reconstruire votre fichier de paie, de trésorerie ou de suivi RH <b>sans jamais avoir eu vos chiffres réels sous les yeux</b>.</p>
+
+            <div class="ba-grid conf-grid">
+                <div class="ba-card ba-after">
+                    <h3>Ce dont j'ai besoin</h3>
+                    <ul>
+                        <li>La liste des colonnes et ce qu'elles représentent.</li>
+                        <li>Les formules et les règles de calcul.</li>
+                        <li>La logique : quels onglets se parlent, dans quel ordre.</li>
+                        <li>Au besoin, un exemple avec des valeurs fictives.</li>
+                    </ul>
+                </div>
+                <div class="ba-card ba-never">
+                    <h3>Ce que je ne fais jamais</h3>
+                    <ul>
+                        <li>Ouvrir vos fichiers de paie, bancaires ou nominatifs pour en lire le contenu réel.</li>
+                        <li>Recopier un montant, un solde, un salaire ou un nom dans un document.</li>
+                        <li>Envoyer une donnée sensible vers un service extérieur (cloud, intelligence artificielle).</li>
+                        <li>Conserver vos vraies données « au cas où » après la mission.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="trust-card conf-install">
+                <span class="ico">🏠</span>
+                <p><b>L'installation se fait chez vous, par vos équipes.</b> Je livre un package autonome ; c'est votre technicien ou votre service informatique qui l'installe, sur votre serveur ou vos postes, derrière vos protections habituelles. Je n'ai besoin d'accéder ni à votre serveur ni à vos données — et c'est <b>vous</b> qui importez vos vrais chiffres, une fois l'outil prêt.</p>
+            </div>
+
+            <div class="center">
+                <a class="btn btn-primary" href="charte-confidentialite.pdf" target="_blank" rel="noopener">📄 Télécharger la charte de confidentialité (PDF)</a>
+            </div>
+            <p class="fineprint">Compatible RGPD : je travaille sur la structure, pas sur les données personnelles — il n'y a donc pas de transfert de données personnelles vers un prestataire. « Faites-moi confiance » n'est pas une garantie ; un engagement écrit, oui.</p>
+        </div>
+    </section>
+
+    <!-- ============ 5ter. AVIS CLIENTS (rempli dynamiquement, masqué si vide) ============ -->
     <section class="section" id="avis" hidden>
         <div class="wrap">
             <h2>Ils m'ont fait confiance</h2>
@@ -212,8 +254,16 @@
                     <p>Quelques semaines pour une application comme la démo, pas des mois. Vous continuez à travailler sur votre Excel pendant ce temps.</p>
                 </details>
                 <details>
-                    <summary>Et mes données ?</summary>
-                    <p>Elles restent chez vous : application installable en local, sauvegardes en 1 clic, et rien n'est publié — la démo en ligne ne contient que des données fictives.</p>
+                    <summary>Et mes données confidentielles ?</summary>
+                    <p>Pour reconstruire votre outil, j'ai besoin de sa structure (colonnes, formules, logique), pas de son contenu. Vos salaires, noms et montants réels ne me sont ni montrés, ni recopiés, ni envoyés vers un service extérieur, ni conservés. Compatible RGPD : pas de transfert de données personnelles vers un prestataire. Tout est écrit dans ma <a href="charte-confidentialite.pdf" target="_blank" rel="noopener">charte de confidentialité</a>, remise avant le démarrage.</p>
+                </details>
+                <details>
+                    <summary>Qui installe l'application ?</summary>
+                    <p>Vos équipes. Je livre un package autonome ; votre technicien ou votre service informatique l'installe sur votre serveur ou vos postes, derrière vos protections habituelles — je n'ai pas besoin d'y accéder. Pas de service informatique ? Je peux accompagner l'installation, sous votre contrôle, sans copier vos données.</p>
+                </details>
+                <details>
+                    <summary>Où sont stockées mes données ensuite ?</summary>
+                    <p>Chez vous. L'application est installable en local, sans hébergement cloud obligatoire, avec sauvegarde et restauration en 1 clic. Rien n'est publié : la démo en ligne ne contient que des données fictives.</p>
                 </details>
             </div>
         </div>

@@ -186,6 +186,15 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .trust-card .ico { font-size: 1.5rem; line-height: 1.2; }
 .trust-card p { color: var(--muted-2); }
 
+/* ---------- CONFIDENTIALITÉ ---------- */
+.conf-intro { color: var(--muted); margin-top: 20px; max-width: 780px; }
+.conf-grid { margin-top: 28px; }
+.ba-never { background: rgba(208,71,63,.08); border-color: rgba(208,71,63,.32); }
+.ba-never h3 { color: #f0938c; }
+.ba-never li::before { content: "✕"; position: absolute; left: 6px; color: #d0473f; font-weight: 700; }
+.conf-install { margin-top: 20px; }
+.conf-install .ico { font-size: 1.7rem; }
+
 /* ---------- QUI JE SUIS ---------- */
 .about { display: grid; gap: 30px; grid-template-columns: 1fr; align-items: center; }
 .about-photo {
