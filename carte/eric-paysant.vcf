@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Paysant;Eric;;;
+FN:Eric Paysant
+ORG:ERP Conseil
+TITLE:Data · Power BI · Applications métier sur mesure
+TEL;TYPE=CELL,VOICE:+33621849054
+EMAIL;TYPE=INTERNET,WORK:eric@ericpaysant.fr
+URL:https://eric8740-stack.github.io/erp-conseil/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/ericpaysant
+NOTE:Vos fichiers Excel deviennent de vraies applications métier. Data, Power BI, applications sur mesure pour TPE/PME et industrie.
+END:VCARD
