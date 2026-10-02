@@ -9,11 +9,12 @@ const { chromium } = require('playwright');
   await page.goto('file://' + path.join(dir, 'carte-visite.html'));
   await page.emulateMedia({ media: 'print' });
   await page.evaluate(() => document.fonts.ready);
-  await page.pdf({
-    path: path.join(dir, 'carte-visite-vistaprint-88x58.pdf'),
-    width: '88mm', height: '58mm', printBackground: true, preferCSSPageSize: true,
-    margin: { top: 0, right: 0, bottom: 0, left: 0 },
-  });
+  const opts = { width: '88mm', height: '58mm', printBackground: true, preferCSSPageSize: true,
+                 margin: { top: 0, right: 0, bottom: 0, left: 0 } };
+  // Fichier complet (2 pages) + recto seul + verso seul, pour l'import page par page sur Vistaprint.
+  await page.pdf({ ...opts, path: path.join(dir, 'carte-visite-vistaprint-88x58.pdf') });
+  await page.pdf({ ...opts, pageRanges: '1', path: path.join(dir, 'carte-visite-vistaprint-88x58-recto.pdf') });
+  await page.pdf({ ...opts, pageRanges: '2', path: path.join(dir, 'carte-visite-vistaprint-88x58-verso.pdf') });
   await browser.close();
-  console.log('PDF écrit : carte/print/carte-visite-vistaprint-88x58.pdf');
+  console.log('PDF écrits : carte/print/carte-visite-vistaprint-88x58{,-recto,-verso}.pdf');
 })();
