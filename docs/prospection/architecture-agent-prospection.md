@@ -50,7 +50,15 @@ Choix par défaut (modifiables dans le nœud « Paramètres de ciblage ») :
 | departements | 87, 19, 23, 16, 24, 86 | Limoges + voisins, pour un premier lot testable. Vider le champ = toute la France. |
 | max_pages_par_naf | 40 (1 000 fiches max par NAF) | Garde-fou. |
 
-Limite connue : Sirene ne donne ni site web ni email. C'est l'objet de l'étape 2.
+Premier run réel (04/10/2026) : 21 codes NAF, 359 entreprises insérées en 18 s,
+pagination complète vérifiée (ex. 25.62B : 80 fiches sur 4 pages). Gros
+contributeurs : 86 (84), 16 (69), 87 (58), 24 (50), 19 (46).
+
+Limites connues :
+- Sirene ne donne ni site web ni email. C'est l'objet de l'étape 2.
+- Le filtre `departement` de l'API porte sur *tous* les établissements : ~40
+  fiches ont leur siège hors zone (17, 33, 75…) mais un atelier dans la zone.
+  Elles restent pertinentes ; sinon, ajouter un nœud Filter sur `departement`.
 
 ## 2. Site web + email — À FAIRE
 
