@@ -84,13 +84,19 @@ Anthropic déjà en place) pour choisir le bon email quand il y en a plusieurs.
 
 ## 3. Envoi par lots — À FAIRE, SANS ENVOI AVANT VALIDATION
 
-- Déclencheur : planning (ex. mardi et jeudi 09:00), 30 emails/jour maximum au
-  départ (réputation du domaine), via le credential Gmail existant.
+- Expéditeur : **eric@ericpaysant.fr** via le nœud n8n Microsoft Outlook
+  (décision d'Eric du 04/10/2026 ; credential Outlook OAuth2 à créer dans n8n,
+  pas Gmail). Déclencheur : planning (ex. mardi et jeudi 09:00), 30 emails/jour
+  maximum au départ (réputation du domaine).
   Si le volume dépasse ~50/jour, passer à Brevo (SMTP dédié, gratuit jusqu'à
   300/jour, gère désinscription et bounces nativement).
+- Texte de l'email : version validée par Eric le 04/10/2026, en texte brut
+  (pitch application de maintenance, démo maintenance.apppreview.fr), copiée
+  dans `docs/prospection/email_type.md`. Variables n8n : `{{siren}}` et
+  `{{jeton}}` dans le lien de désinscription uniquement.
 - Lit `statut = a_contacter`, exclut `desinscrit`, limite au quota du jour.
-- Email texte court personnalisé (nom, ville, activité), plaquette PDF en pièce
-  jointe (ou lien), lien de désinscription obligatoire en pied de mail.
+- Pas de pièce jointe au premier envoi (délivrabilité) : le lien vers la démo
+  remplace la plaquette. Lien de désinscription obligatoire en pied de mail.
 - Marque `statut = envoye`, `envoye_le`. Erreur Gmail → `note`.
 - Cadre légal B2B (CNIL) : prospection vers adresse professionnelle générique
   autorisée si le sujet est en lien avec l'activité du destinataire, avec
@@ -111,7 +117,7 @@ Anthropic déjà en place) pour choisir le bon email quand il y en a plusieurs.
 1. ✅ Extraction (ce commit). Eric ajuste NAF/départements et relance.
 2. Workflow 2 : nécessite une clé Serper.dev (ou Brave) → credential n8n.
 3. Workflow 4 (désinscription) avant le 3, pour que le lien existe.
-4. Workflow 3 en mode « brouillon Gmail » d'abord (crée des brouillons, n'envoie
+4. Workflow 3 en mode « brouillon Outlook » d'abord (crée des brouillons, n'envoie
    pas), validation par Eric sur 5 exemples, puis bascule en envoi réel.
 
 Dossier `docs/prospection/` : ce plan + export JSON des workflows à chaque étape.
