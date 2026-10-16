@@ -162,6 +162,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 .center .btn { margin-top: 8px; }
 .fineprint { margin-top: 22px; text-align: center; color: var(--muted); font-size: .88rem; }
+.section-intro { max-width: 780px; margin: -8px 0 26px; color: var(--muted-2); font-size: 1.05rem; line-height: 1.6; }
 
 /* ---------- ÉTAPES ---------- */
 .steps { list-style: none; display: grid; gap: 18px; max-width: 780px; }
