@@ -38,7 +38,7 @@ b { font-weight: 700; color: var(--muted-2); }
 
 /* ---------- Layout ---------- */
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 22px; }
-.section { padding: 74px 0; }
+.section { padding: 74px 0; scroll-margin-top: 60px; }
 .section-alt { background: rgba(0,0,0,.16); border-block: 1px solid var(--line); }
 .center { text-align: center; }
 
@@ -95,6 +95,8 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 .hero-visual:hover { transform: translateY(-3px); border-color: rgba(255,216,77,.45); }
 .hero-visual img { width: 100%; display: block; }
+.hv-vue { display: block; }
+.hv-apres { display: none; }
 .hero-visual-cap {
   display: block; padding: 9px 12px; font-size: .8rem; color: var(--muted);
   background: rgba(0,0,0,.35); border-top: 1px solid var(--line);
@@ -127,7 +129,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   color: var(--muted-2);
 }
 .pain-list li::before {
-  content: "⚠"; position: absolute; left: 18px; top: 15px;
+  content: "→"; position: absolute; left: 18px; top: 15px;
   color: var(--yellow); font-size: 1.1rem;
 }
 .switch {
@@ -178,12 +180,10 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .steps p { color: var(--muted); }
 
 /* ---------- FIABILITÉ ---------- */
-.trust-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 .trust-card {
   display: flex; gap: 14px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
 }
-.trust-card .ico { font-size: 1.5rem; line-height: 1.2; }
 .trust-card p { color: var(--muted-2); }
 
 /* ---------- CONFIDENTIALITÉ ---------- */
@@ -193,7 +193,6 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .ba-never h3 { color: #f0938c; }
 .ba-never li::before { content: "✕"; position: absolute; left: 6px; color: #d0473f; font-weight: 700; }
 .conf-install { margin-top: 20px; }
-.conf-install .ico { font-size: 1.7rem; }
 
 /* ---------- QUI JE SUIS ---------- */
 .about { display: grid; gap: 30px; grid-template-columns: 1fr; align-items: center; }
@@ -275,7 +274,6 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 @media (min-width: 720px) {
   .ba-grid { grid-template-columns: 1fr 1fr; }
   .avis-grid { grid-template-columns: 1fr 1fr 1fr; }
-  .trust-grid { grid-template-columns: 1fr 1fr; }
   .about { grid-template-columns: 160px 1fr; }
   .about-photo { width: 160px; height: 160px; }
 }
@@ -283,4 +281,13 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 @media (max-width: 640px) {
   .nav-links a:not(.nav-cta) { display: none; }
   .section { padding: 56px 0; }
+  .btn { white-space: normal; text-align: center; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hv-vue { overflow: hidden; }
+  .hv-vue img { width: 200%; max-width: none; }
+  .hv-apres { display: block; border-top: 1px solid var(--line); }
+  .hv-apres img { margin-left: -100%; }
+  .ba-card { padding: 20px 18px; }
+  .steps li { padding: 18px; gap: 14px; }
+  .quote { font-size: 1.25rem; }
 }
