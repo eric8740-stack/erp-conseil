@@ -165,6 +165,18 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .center .btn { margin-top: 8px; }
 .fineprint { margin-top: 22px; text-align: center; color: var(--muted); font-size: .88rem; }
 
+/* ---------- AUTRES DÉMOS ---------- */
+.demos-sub { color: var(--muted); margin: -14px 0 26px; }
+.demo-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.demo-card {
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.demo-card:hover { transform: translateY(-2px); border-color: rgba(255,216,77,.45); }
+.demo-card p { color: var(--muted-2); flex: 1; }
+.demo-link { color: var(--yellow); font-weight: 700; }
+
 /* ---------- ÉTAPES ---------- */
 .steps { list-style: none; display: grid; gap: 18px; max-width: 780px; }
 .steps li {
@@ -273,6 +285,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
    ============================================================ */
 @media (min-width: 720px) {
   .ba-grid { grid-template-columns: 1fr 1fr; }
+  .demo-grid { grid-template-columns: 1fr 1fr 1fr; }
   .avis-grid { grid-template-columns: 1fr 1fr 1fr; }
   .about { grid-template-columns: 160px 1fr; }
   .about-photo { width: 160px; height: 160px; }
